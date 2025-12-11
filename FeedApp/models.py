@@ -27,7 +27,7 @@ STATUS_CHOICES = (
 class Relationship(models.Model):  # establishing relationship between two profiles
     sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='sender') # profile sending the friend request
     receiver = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='receiver') # profile receiving the friend request
-    status = models.CharField(max_length=8, choices=STATUS_CHOICES, default="send") # status of the friend request
+    status = models.CharField(max_length=8, choices=STATUS_CHOICES, default="sent") # status of the friend request
     created = models.DateTimeField(auto_now=True) # date time when relationship is created
     updated = models.DateTimeField(auto_now_add=True) # date time when relationship is updated
 
@@ -49,6 +49,6 @@ class Comment(models.Model):
     def __str__(self): 
         return self.text
     
-class Like(models.Model): # keep trak of likes on posts
+class Like(models.Model): # keep track of likes on posts
     username = models.ForeignKey(User, related_name='likes', on_delete=models.CASCADE) # who liked the post
     post = models.ForeignKey(Post, related_name='likes', on_delete=models.CASCADE) # which post was liked 

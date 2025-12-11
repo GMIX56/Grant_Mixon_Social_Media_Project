@@ -1,12 +1,64 @@
 {% extends "FeedApp/base.html" %}
 
 {% block page_header %}
-    <div class="jumbotron">
-       <h1 class="display-3">Feed</h1>
-            <p class="lead">A Social Network where you can be you.
-            </p>
+<div class="jumbotron text-center" style="background: linear-gradient(135deg, #4e54c8, #8f94fb); color: white;">
+    <h1 class="display-3">Feed</h1>
+    <p class="lead">A social network where you can be unapologetically you.</p>
 
-            <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}"
-            role="button">Join Now &raquo;</a>
-    </div>
+    <a class="btn btn-lg btn-light" href="{% url 'users:register' %}" role="button">
+        Join Now &raquo;
+    </a>
+</div>
 {% endblock page_header %}
+
+{% block content %}
+
+<!-- Art / Image strip -->
+<div class="row mb-4">
+    <div class="col-md-4 mb-3">
+        <img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded shadow-sm"
+            alt="Colorful abstract art">
+    </div>
+    <div class="col-md-4 mb-3">
+        <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded shadow-sm" alt="City skyline">
+    </div>
+    <div class="col-md-4 mb-3">
+        <img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded shadow-sm" alt="Nature landscape">
+    </div>
+</div>
+
+<!-- Feature cards -->
+<div class="row mb-5">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Share Your Story</h5>
+                <p class="card-text">
+                    Post photos and updates to your feed and let your friends see what you’re up to.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Connect With Friends</h5>
+                <p class="card-text">
+                    Send friend requests, build your network, and keep up with the people who matter.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">See Your Friends’ Feed</h5>
+                <p class="card-text">
+                    Switch to the Friends Feed to see only the posts from people you’ve added.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
