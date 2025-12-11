@@ -7,8 +7,8 @@
     <p>Post: {{ post.description }} </p>
 </h2>
 <h2>
-    {% if p.image %}
-    <p><img src="{{ p.image.url}}" class="img-thumbnail" style="max-height:300px" alt="No image"><br><br></p>
+    {% if post.image %}
+    <p><img src="{{ post.image.url}}" class="img-thumbnail" style="max-height:300px" alt="No image"><br><br></p>
     {% endif %}
 </h2>
 
