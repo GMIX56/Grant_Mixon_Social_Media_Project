@@ -24,6 +24,9 @@
         <td>Likes: &nbsp {{l}} &nbsp&nbsp&nbsp</td>
         <td>Comments: &nbsp <a href="{% url 'FeedApp:comments' p.id %}">{{c}}</a> &nbsp&nbsp</td>
     </tr>
+    <tr>
+        <td><br></td>
+    </tr>
     {% endfor %}
 
 </table>

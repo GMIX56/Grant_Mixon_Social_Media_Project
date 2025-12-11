@@ -1,29 +1,43 @@
 {% extends "FeedApp/base.html" %}
 
 {% block page_header %}
-<div class="jumbotron text-center" style="background: linear-gradient(135deg, #4e54c8, #8f94fb); color: white;">
-    <h1 class="display-3">Feed</h1>
-    <p class="lead">A social network where you can be unapologetically you.</p>
+<div class="jumbotron text-center" style="background: linear-gradient(135deg, #1f3b4d, #3b6b4f); color: #f5f7fa;">
+    <h1 class="display-3">RangeLine</h1>
+    <p class="lead">
+        Share your life across peaks, trails, powder days, and campfires.
+    </p>
 
-    <a class="btn btn-lg btn-light" href="{% url 'users:register' %}" role="button">
-        Join Now &raquo;
+    <a class="btn btn-lg btn-outline-light" href="{% url 'users:register' %}" role="button">
+        Join RangeLine &raquo;
     </a>
 </div>
 {% endblock page_header %}
 
 {% block content %}
 
-<!-- Art / Image strip -->
+<style>
+    .rangeline-hero-img {
+        height: 220px;
+        /* tweak this height if you want them taller/shorter */
+        width: 100%;
+        object-fit: cover;
+        /* crops nicely instead of squishing */
+    }
+</style>
+
+<!-- Adventure image row: skier, hiker, hunter -->
 <div class="row mb-4">
     <div class="col-md-4 mb-3">
-        <img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded shadow-sm"
-            alt="Colorful abstract art">
+        <img src="https://images.pexels.com/photos/19384334/pexels-photo-19384334.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            class="img-fluid rounded shadow-sm rangeline-hero-img" alt="Skier on a snowy slope">
     </div>
     <div class="col-md-4 mb-3">
-        <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded shadow-sm" alt="City skyline">
+        <img src="https://images.pexels.com/photos/26238549/pexels-photo-26238549.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            class="img-fluid rounded shadow-sm rangeline-hero-img" alt="Hiker on a mountain trail">
     </div>
     <div class="col-md-4 mb-3">
-        <img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded shadow-sm" alt="Nature landscape">
+        <img src="https://images.pexels.com/photos/10802042/pexels-photo-10802042.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            class="img-fluid rounded shadow-sm rangeline-hero-img" alt="Hunter in the woods">
     </div>
 </div>
 
@@ -32,32 +46,58 @@
     <div class="col-md-4 mb-3">
         <div class="card h-100 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">Share Your Story</h5>
+                <h5 class="card-title">Log Every Adventure</h5>
                 <p class="card-text">
-                    Post photos and updates to your feed and let your friends see what you’re up to.
+                    Use <strong>My Feed</strong> to post ski days, hikes, climbs, hunts,
+                    trail runs, or weekend cabin trips — all in one place.
                 </p>
             </div>
         </div>
     </div>
+
     <div class="col-md-4 mb-3">
         <div class="card h-100 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">Connect With Friends</h5>
+                <h5 class="card-title">Build Your Crew</h5>
                 <p class="card-text">
-                    Send friend requests, build your network, and keep up with the people who matter.
+                    Send friend requests, build your RangeLine circle, and stay connected
+                    with the people you explore with.
                 </p>
             </div>
         </div>
     </div>
+
     <div class="col-md-4 mb-3">
         <div class="card h-100 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">See Your Friends’ Feed</h5>
+                <h5 class="card-title">See the Line</h5>
                 <p class="card-text">
-                    Switch to the Friends Feed to see only the posts from people you’ve added.
+                    Swap between <strong>My Feed</strong> and <strong>Friends Feed</strong>
+                    to see your own adventures or just the trips from your outdoors crew.
                 </p>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- How it works (text only, no video) -->
+<div class="row mb-5">
+    <div class="col-md-12">
+        <h3>How RangeLine Works</h3>
+        <p>
+            RangeLine is your digital logbook for everything outdoors — from bluebird ski days
+            and alpine starts to trailhead sunrises, hunting trips, and campfire nights.
+        </p>
+        <ul>
+            <li>Set up your profile on the <strong>Profile</strong> page.</li>
+            <li>Create posts with photos and descriptions in <strong>New Post</strong>.</li>
+            <li>Use <strong>Friends</strong> to add the people you ski, hike, climb, and hunt with.</li>
+            <li>Scroll <strong>Friends Feed</strong> to see just your crew’s adventures.</li>
+        </ul>
+        <p>
+            Think of it like a shared trail journal, ski lodge wall, and campfire story circle —
+            all rolled into one simple feed.
+        </p>
     </div>
 </div>
 
